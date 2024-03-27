@@ -29,6 +29,28 @@
     "tapping": {
         "toggle": 2
     },
+    "rgblight": {
+        "default": {
+            "on": true
+        },
+        "saturation_steps": 8,
+        "brightness_steps": 8,
+        "led_count": 72,
+        "max_brightness": 120,
+# "split_count": [33, 33],
+        "animations": {
+            "rainbow_mood": true,
+            "rainbow_swirl": true,
+            "static_gradient": true,
+            "rgb_test": true,
+            "breathing": true,
+            "snake": true,
+            "twinkle": true
+        }
+    },
+    "ws2812": {
+        "pin": "GP28"
+    },
     "encoder": {
         "rotary": [
             {"pin_a": "GP0", "pin_b": "GP1"}
