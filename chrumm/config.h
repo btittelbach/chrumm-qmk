@@ -17,3 +17,6 @@
 
 #define ONESHOT_TAP_TOGGLE 3  /* Tapping this number of times holds the key until tapped once again. */
 #define ONESHOT_TIMEOUT 1600
+
+#define WS2812_DI_PIN GP28
+#define RGBLIGHT_LED_COUNT 72
