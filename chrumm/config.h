@@ -15,3 +15,5 @@
 
 #define PS2_MOUSE_ROTATE 180 /* Compensate for South-facing device orientation. */
 
+#define ONESHOT_TAP_TOGGLE 3  /* Tapping this number of times holds the key until tapped once again. */
+#define ONESHOT_TIMEOUT 1600
