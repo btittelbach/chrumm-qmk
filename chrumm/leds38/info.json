@@ -1,0 +1,25 @@
+{
+    "rgblight": {
+        "default": {
+            "on": true,
+        },
+        "saturation_steps": 8,
+        "brightness_steps": 8,
+        "led_count": 38,
+        "max_brightness": 192,
+        "animations": {
+            "rainbow_mood": true,
+            "rainbow_swirl": true,
+            "static_gradient": true,
+            "rgb_test": false,
+            "breathing": true,
+            "snake": true,
+            "twinkle": true,
+            "christmas": false,
+            "knight": false,
+        }
+    },
+    "ws2812": {
+        "pin": "GP28"
+    }
+}
