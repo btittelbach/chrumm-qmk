@@ -18,8 +18,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTL, OSL(1),  KC_LGUI, KC_LALT, KC_SPC,  KC_BSPC, KC_ENT,  KC_SPC,   KC_RALT,  KC_DEL,  KC_LEFT,  KC_DOWN, KC_RIGHT
     ),
     [_FN] = LAYOUT(
-        KC_GRV,  KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_P7,    KC_P8,    KC_P9,   KC_PMNS,  KC_BSPC, KC_DEL,
-        MO(2),   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_P4,    KC_P5,    KC_P6,   KC_PPLS,  KC_LPRN, KC_RPRN,
+        KC_GRV,  KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_P7,    KC_P8,    KC_P9,   KC_PMNS,  KC_BSPC, KC_F12,
+        MO(2),   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_P4,    KC_P5,    KC_P6,   KC_PPLS,  KC_DEL,  KC_ENT,
         _______, KC_APP,  KC_MPRV, KC_MPLY, KC_MNXT, KC_MSTP, XXXXXXX, KC_P1,    KC_P2,    KC_P3,   KC_PSLS,  XXXXXXX, _______,
         _______, KC_NUBS, KC_BTN2, KC_BTN3, KC_BTN1, KC_MUTE, XXXXXXX, KC_P0,    KC_P0,    KC_PDOT, KC_PAST,  KC_PGUP, _______,
         _______, _______, _______, _______, _______, _______, _______, _______,  _______,  KC_INS,  KC_HOME,  KC_PGDN, KC_END
@@ -44,26 +44,28 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 
 #define HSV_SGREEN        92, 255, 255
 
+#define RGBLED_NUM_L 38
+
 #if defined(RGBLIGHT_LAYERS)
 // Light up when shift is pressed or caps lock active
 const rgblight_segment_t PROGMEM led_neo_mod2_layer[] = RGBLIGHT_LAYER_SEGMENTS(
     {0, 3, HSV_CYAN},       // Light 3 LEDs, starting with LED 0
-    {34, 3, HSV_CYAN}       // Light 3 LEDs, starting with LED 34
+    {RGBLED_NUM_L-1-3, 3, HSV_CYAN}       // Light 3 LEDs, starting with LED 34
 );
 // Light up when keys above shift are pressed
 const rgblight_segment_t PROGMEM led_neo_mod3_layer[] = RGBLIGHT_LAYER_SEGMENTS(
     {3, 3, HSV_SGREEN},
-    {31, 3, HSV_SGREEN}
+    {RGBLED_NUM_L-1-6, 3, HSV_SGREEN}
 );
 // Light up when altgr is held
 const rgblight_segment_t PROGMEM led_neo_mod4_layer[] = RGBLIGHT_LAYER_SEGMENTS(
     {6, 3, HSV_CHARTREUSE},
-    {24, 3, HSV_CHARTREUSE}
+    {RGBLED_NUM_L-14, 3, HSV_CHARTREUSE}
 );
 // Light up when shift is pressed or caps lock active
 const rgblight_segment_t PROGMEM led_neo_capslock_layer[] = RGBLIGHT_LAYER_SEGMENTS(
     {1, 3, HSV_CYAN},       // Light 3 LEDs, starting with LED 1
-    {33, 3, HSV_CYAN}       // Light 3 LEDs, starting with LED 33
+    {RGBLED_NUM_L-1-1-3, 3, HSV_CYAN}       // Light 3 LEDs, starting with LED 33
 );
 // Light up purple when keyboard _FN layer is active
 const rgblight_segment_t PROGMEM led_kbd_fn_layer[] = RGBLIGHT_LAYER_SEGMENTS(
@@ -81,7 +83,7 @@ const rgblight_segment_t PROGMEM led_kbd_config_layer[] = RGBLIGHT_LAYER_SEGMENT
 );
 // Light up when numlock is active
 const rgblight_segment_t PROGMEM led_numlock_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {18, 2, HSV_RED}
+    {RGBLED_NUM_L-20, 2, HSV_RED}
 );
 
 
