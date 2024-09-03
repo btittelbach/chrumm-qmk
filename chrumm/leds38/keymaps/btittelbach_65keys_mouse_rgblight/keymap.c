@@ -140,5 +140,15 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     return state;
 }
 
+const uint16_t PROGMEM pageup_combo[] = {KC_SLSH, KC_LEFT, COMBO_END};
+const uint16_t PROGMEM pagedown_combo[] = {KC_RSFT, KC_RIGHT, COMBO_END};
+const uint16_t PROGMEM leftmeta3_combo[] = {OSL(1), KC_Z, COMBO_END};
+
+combo_t key_combos[] = {
+    COMBO(pageup_combo, KC_PGUP),
+    COMBO(pagedown_combo, KC_PGDN),
+    COMBO(leftmeta3_combo, KC_NUBS),
+};
+
 #endif
 
