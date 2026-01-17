@@ -13,6 +13,10 @@
 #define PS2_MOUSE_INVERT_X
 */
 
+#define POINTING_DEVICE_INVERT_X
+#define POINTING_DEVICE_INVERT_Y
+
+
 #define PS2_MOUSE_ROTATE 180 /* Compensate for South-facing device orientation. */
 
 #define ONESHOT_TAP_TOGGLE 3  /* Tapping this number of times holds the key until tapped once again. */
@@ -31,3 +35,7 @@
 #define RGBLIGHT_LAYERS
 #define RGBLIGHT_LAYERS_OVERRIDE_RGB_OFF
 #define RGBLIGHT_LAYERS_RETAIN_VAL
+
+#define DEBOUNCE 8
+
+
